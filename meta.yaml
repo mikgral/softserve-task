@@ -29,7 +29,7 @@ test:
     - softserve_task
 
 about:
-  home: "https://github.com/mikgral/softserve-task/tree/master"
+  home: "https://github.com/mikgral/softserve-task"
   summary: "A simple C++ project demonstrating Conda packaging with Boost."
   license: "MIT"
 
