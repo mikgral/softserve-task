@@ -1,0 +1,38 @@
+package:
+  name: hellosoftserve
+  version: "1.0.0"
+
+source:
+  path: .
+
+build:
+  number: 0
+  script:
+    - mkdir -p build
+    - pushd build
+    - cmake .. -DCMAKE_INSTALL_PREFIX=${PREFIX}
+    - cmake --build . --target install
+    - popd
+
+
+requirements:
+  build:
+    - gcc
+    - cmake
+  host:
+    - boost >=1.83
+  run:
+    - boost >=1.83
+
+test:
+  commands:
+    - softserve_task
+
+about:
+  home: "https://github.com/mikgral/softserve-task/tree/master"
+  summary: "A simple C++ project demonstrating Conda packaging with Boost."
+  license: "MIT"
+
+channels:
+  - conda-forge
+  - defaults
